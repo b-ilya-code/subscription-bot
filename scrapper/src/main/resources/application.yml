@@ -1,15 +1,13 @@
-app:
+scrapper:
+  test: "ficko"
   scheduler:
-    enable: true
-    interval: 10s
-    force-check-delay: 10s
+    interval: 5000
 
-spring:
-  application:
-    name: scrapper
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui"
 
-server:
-  port: 8080
-
-logging:
-  config: classpath:log4j2-plain.xml
+client:
+  base-url:
+    github: "https://api.github.com"
+    stackoverflow: "https://api.stackexchange.com/2.3"
